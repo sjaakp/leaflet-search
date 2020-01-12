@@ -2,7 +2,8 @@ leaflet-search
 --------------
 #### Search Control for Leaflet ####
 
-**Leaflet-search** is ...
+**Leaflet-search** is a Search Control for the [Leaflet](https://leafletjs.com/)
+open source JavaScript map library. It makes use of one of several geocoding services.
 
 A demo of **Leaflet-search** is [here](https://sjaakpriester.nl/software/leaflet-search).
 
@@ -26,19 +27,28 @@ A minimum HTML page with a **Leaflet-search** would look something like this:
 
 	<html>
 	<head>
-        <link href="/dist/leaflet-search.css" rel="stylesheet">
+        <link href="//unpkg.com/leaflet@1.6.0/dist/leaflet.css" rel="stylesheet">
 	</head>
 	<body>
 
-		<div id="dl"></div>
+		<div id="m"></div>
 
-		<script src="/dist/leaflet-search.js"></script>
+		<script src="//unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+		<script src="leaflet-search.js"></script>
 
 		<script>
-			leaflet-search("dl", /* options */);
+			var map = L.map("m" /* , { ... map options ... } */);
+			map.geocoder('Nominatim' /* , { ... geocoder opotions ... } */);
+			map.finder(/* { ... finder opotions ... } */);
 		</script>
 	</body>
 	</html>
+	
+The assets for **Leaflet** are loaded, as well as those for **Leaflet-search** (a single
+`js`-file). A **Leaflet** `Map` is initialized. It has gotten two new methods:
+
+- `geocoder(<string> name, <Object> options?)` Sets the geocoder with options. Return: `this`.
+- `finder(<Object> options?)` Adds the `Search`-control with options. Return: `this`.
 
 ## CDN ##
 

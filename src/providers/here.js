@@ -1,3 +1,14 @@
+/**
+ * sjaakp/leaflet-search
+ * ----------
+ * Search Control for Leaflet
+ * Version 1.0.0
+ * Copyright (c) 2020
+ * Sjaak Priester, Amsterdam
+ * MIT License
+ * https://github.com/sjaakp/leaflet-search
+ * https://sjaakpriester.nl
+ */
 
 /**
  * @link https://developer.here.com/documentation/geocoder/dev_guide/topics/request-constructing.html

@@ -1,4 +1,15 @@
 
+/**
+ * sjaakp/leaflet-search
+ * ----------
+ * Search Control for Leaflet
+ * Version 1.0.0
+ * Copyright (c) 2020
+ * Sjaak Priester, Amsterdam
+ * MIT License
+ * https://github.com/sjaakp/leaflet-search
+ * https://sjaakpriester.nl
+ */
 
 /**
  * @link https://nominatim.org/release-docs/develop/api/Search/

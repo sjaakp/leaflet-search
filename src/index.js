@@ -93,7 +93,7 @@ L.Map.include({
     },
 
     finder(options)  {
-        this.addControl(L.search(options));
+        return this.addControl(L.search(options));
     }
 });
 
