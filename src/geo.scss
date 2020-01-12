@@ -1,0 +1,27 @@
+
+.geo-search {
+  border-radius: 4px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
+  svg {
+    width: 1em;
+  }
+  input {
+    transition: width .4s;
+    width: 0;
+    padding: 1px 0;
+    border: solid #888;
+    border-width: 1px 0;
+    outline: 0;
+  }
+  &.open input {
+    width: 15em;
+    padding: 1px 2px;
+    border-width: 1px;
+  }
+  button  {
+    border: 1px solid #888;
+    &:hover  {
+      background-color: #ddd;
+    }
+  }
+}

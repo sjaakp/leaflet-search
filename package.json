@@ -1,0 +1,43 @@
+{
+  "name": "@sjaakp/leaflet-search",
+  "version": "1.0.0",
+  "description": "Search Control for Leaflet",
+  "browser": "./dist/leaflet-search.js",
+  "files": [
+    "dist/*"
+  ],
+  "scripts": {
+    "prepare": "rollup -c",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sjaakp/leaflet-search.git"
+  },
+  "keywords": [
+    "map",
+    "Leaflet",
+    "search",
+    "geo"
+  ],
+  "author": "Sjaak Priester <sjaak@sjaakpriester.nl> (https://sjaakpriester.nl)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sjaakp/leaflet-search/issues"
+  },
+  "homepage": "https://github.com/sjaakp/leaflet-search#readme",
+  "dependencies": {
+    "core-js": "^3.6.3",
+    "lodash.debounce": "^4.0.8"
+  },
+  "devDependencies": {
+    "@rollup/plugin-buble": "^0.21.0",
+    "@rollup/plugin-commonjs": "^11.0.0",
+    "@rollup/plugin-json": "^4.0.0",
+    "@rollup/plugin-node-resolve": "^6.0.0",
+    "rollup": "^1.27.14",
+    "rollup-plugin-cleanup": "^3.1.1",
+    "rollup-plugin-sass": "^1.2.2",
+    "rollup-plugin-terser": "^5.1.0"
+  }
+}
