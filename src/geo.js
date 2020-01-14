@@ -31,8 +31,8 @@ L.geo = {
                 .then(response => response.json())
         },
 
-        placeMarker(latlng, bbox)   {
-            this._map.placeMarker(latlng, bbox);
+        placeMarker(latlng, bbox, place)   {
+            this._map.placeMarker(latlng, bbox, place);
         },
 
         fire(err)   {

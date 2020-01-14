@@ -21,7 +21,7 @@ L.geo.Nominatim = L.geo.Geocoder.extend({
         const latlng = L.latLng(place.lat, place.lon),
             bb = place.boundingbox,
             bbox = L.latLngBounds([bb[0], bb[2]], [bb[1], bb[3]]);
-        this.placeMarker(latlng, bbox);
+        this.placeMarker(latlng, bbox, place);
     },
 
     search(address) {

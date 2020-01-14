@@ -18,7 +18,7 @@ L.geo.Kadaster = L.geo.Geocoder.extend({
     url: 'https://geodata.nationaalgeoregister.nl/locatieserver/v3/',
 
     mark(place) {
-        this.placeMarker(place.centroide_ll.match(/[\d.]+/g).reverse());
+        this.placeMarker(place.centroide_ll.match(/[\d.]+/g).reverse(), null, place);
     },
 
     suggest(address, datalist)  {

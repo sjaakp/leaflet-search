@@ -30,7 +30,7 @@ L.geo.GeoNames = L.geo.Geocoder.extend({
         const latlng = L.latLng(place.lat, place.lng),
             bb = place.bbox,
             bbox = L.latLngBounds([bb.north, bb.west], [bb.south, bb.east]);
-        this.placeMarker(latlng, bbox);
+        this.placeMarker(latlng, bbox, place);
     },
 
     suggest(address, datalist)    {

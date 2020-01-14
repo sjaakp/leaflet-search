@@ -27,7 +27,7 @@ L.geo.TomTom = L.geo.Geocoder.extend({
             tl = mapv.topLeftPoint,
             br = mapv.btmRightPoint,
             bbox = L.latLngBounds([tl.lat, br.lon], [br.lat, tl.lon]);
-        this.placeMarker(latlng, bbox);
+        this.placeMarker(latlng, bbox, place);
     },
 
     fetchResults(address, options = {})  {

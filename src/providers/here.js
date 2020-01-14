@@ -21,7 +21,7 @@ L.geo.Here = L.geo.Geocoder.extend({
             tl = mapv.topLeft,
             br = mapv.bottomRight,
             bbox = L.latLngBounds([tl.latitude, br.longitude], [br.latitude, tl.longitude]);
-        this.placeMarker(latlng, bbox);
+        this.placeMarker(latlng, bbox, place);
     },
 
     fetchData(options)  {
