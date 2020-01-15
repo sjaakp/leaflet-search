@@ -125,12 +125,12 @@ L.Map.include({
         return this;
     },
 
-    addGeocoder(name, options = {})  {
+    setGeocoder(name, options = {})  {
         this._geocoder = new L.geo[name](this, options);
         return this;
     },
 });
 
 L.Map.addInitHook(function() {
-    this.addGeocoder('Nominatim', {});
+    this.setGeocoder('Nominatim', {});
 });

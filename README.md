@@ -21,41 +21,41 @@ You can also manually install **Leaflet-search** by
 Apart from Leaflet itself, **Leaflet-search** has no dependencies. 
 There is no need to load jQuery or other libraries (though it won't hurt).
 
-## CDN ##
-
-**Leaflet-search** is available on the **unpkg** Content Delivery Network, so you
-don't have to host the `leaflet-search.js` file on your own server. In this case,
-the **Leaflet-search** can be loaded like this:
-
-	<script src="//unpkg.com/@sjaakp/leaflet-search/dist/leaflet-search.js"></script>
-
 ## Usage ##
 
 A minimum HTML page with a **Leaflet-search** would look something like this:
 
 	<html>
 	<head>
-        <link href="//unpkg.com/leaflet@1.6.0/dist/leaflet.css" rel="stylesheet">
+        <link href="//unpkg.com/leaflet/dist/leaflet.css" rel="stylesheet">
 	</head>
 	<body>
 
 		<div id="m"></div>
 
-		<script src="//unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+		<script src="//unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="leaflet-search.js"></script>
 
 		<script>
 			var map = L.map("m" /* , { ... map options ... } */);
-			map.addGeocoder('Nominatim' /* , { ... Geocoder options ... } */);
+			map.setGeocoder('Nominatim' /* , { ... Geocoder options ... } */);
 			map.addControl(L.control.search({ ... Search options ...}));
 		</script>
 	</body>
 	</html>
 	
 The assets for **Leaflet** are loaded, as well as those for **Leaflet-search** (a single
-`js`-file). A **Leaflet** `Map` is initialized. It has got a new method:
+`js`-file). A **Leaflet** `Map` is initialized. The Leaflet map now has a new method:
 
-- **`addGeocoder(<string> name, <Object> options?)`** Sets the geocoder with options. Return: `this`.
+- **`setGeocoder(<string> name, <Object> options?)`** Set the geocoder with options. Return: `this`.
+
+#### CDN ####
+
+**Leaflet-search** is available on the **unpkg** Content Delivery Network, so you
+don't have to host the `leaflet-search.js` file on your own server. In this case,
+the **Leaflet-search** can be loaded like this:
+
+	<script src="//unpkg.com/@sjaakp/leaflet-search/dist/leaflet-search.js"></script>
 
 ## L.Control.Search ##
 
@@ -74,7 +74,7 @@ by `L.control.search(<options>)`, so adding **Leaflet-search** to a Map boils do
 **Leaflet-search** retrieves its information from a *geocoding service*. The service is 
 initialized by:
 
-    map.addGeocoder('<geocoder name>', { <geocoder options> });
+    map.setGeocoder('<geocoder name>', { <geocoder options> });
     
 Generally, options will be empty, apart from the API Key some providers expect, and which
 often can be obtained free of charge. Other options may be added.
@@ -90,7 +90,7 @@ supports the following providers (there may be more in the future):
 |[TomTom](https://developer.tomtom.com/search-api/search-api-documentation/)|commercial|{ key: '...' } |
 |[Kadaster](https://github.com/PDOK/locatieserver/wiki/API-Locatieserver)|Netherlands only| |
 
-Notice that some providers may stipulate that you should only use their service on map
+Notice that some providers may stipulate that you should use their service only on map
 tiles of the same provider.
 
 If you don't explicitly set a geocoder, **Leaflet-search** uses *Nominatim*.
