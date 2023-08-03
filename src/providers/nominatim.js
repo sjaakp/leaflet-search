@@ -3,8 +3,8 @@
  * sjaakp/leaflet-search
  * ----------
  * Search Control for Leaflet
- * Version 1.0.0
- * Copyright (c) 2020
+ * Version 1.0.1: adapted to 'lookup'-API, 'reverse' being deprecated
+ * Copyright (c) 2020-2023
  * Sjaak Priester, Amsterdam
  * MIT License
  * https://github.com/sjaakp/leaflet-search
@@ -40,13 +40,19 @@ L.geo.Nominatim = L.geo.Geocoder.extend({
     },
 
     lookup(id)  {
+        const url = this.constructUrl(this.url + 'lookup', {
+            format: 'json',
+            osm_ids: id
+        });
+/*
         const url = this.constructUrl(this.url + 'reverse', {
             format: 'json',
             osm_type: id.charAt(0),
             osm_id: id.slice(1)
         });
+*/
         this.fetchJson(url)
-            .then(json => this.mark(json))
+            .then(json => this.mark(json[0]))
             .catch(error => this.fire(error));
     },
 

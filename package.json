@@ -1,6 +1,6 @@
 {
   "name": "@sjaakp/leaflet-search",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Search Control for Leaflet",
   "browser": "./dist/leaflet-search.js",
   "files": [

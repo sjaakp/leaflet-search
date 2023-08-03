@@ -2,8 +2,8 @@
  * sjaakp/leaflet-search
  * ----------
  * Search Control for Leaflet
- * Version 1.0.0
- * Copyright (c) 2020
+ * Version 1.0.2    API-url changed
+ * Copyright (c) 2020-2023
  * Sjaak Priester, Amsterdam
  * MIT License
  * https://github.com/sjaakp/leaflet-search
@@ -12,10 +12,12 @@
 
 /**
  * Netherlands
+ * @link https://api.pdok.nl/bzk/locatieserver/search/v3_1/ui/
  * @link https://github.com/PDOK/locatieserver/wiki/API-Locatieserver
  */
 L.geo.Kadaster = L.geo.Geocoder.extend({
-    url: 'https://geodata.nationaalgeoregister.nl/locatieserver/v3/',
+    url: 'https://api.pdok.nl/bzk/locatieserver/search/v3_1/',
+    // url: 'https://geodata.nationaalgeoregister.nl/locatieserver/v3/',
 
     mark(place) {
         this.placeMarker(place.centroide_ll.match(/[\d.]+/g).reverse(), null, place);
