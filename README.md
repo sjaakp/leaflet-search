@@ -67,7 +67,7 @@ accepts free-form addresses.
 property from `L.Control`. Following the Leaflet-habit, a new `L.Control.Search` can be created
 by `L.control.search(<options>)`, so adding **Leaflet-search** to a Map boils down to:
 
-    map.addControl(L.control.search({ position: 'bottomright' });
+    map.addControl(L.control.search({ position: 'bottomright' }));
     
 ## Geocoder ##
 
